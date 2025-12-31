@@ -7,21 +7,58 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
 dist
 dist-ssr
 *.local
 
 # Editor directories and files
-.vscode/*
+
+node_modules/
+bun.lockb
+bun.lock
+
+# Build outputs
+dist/
+build/
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# OS generated files
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Environment files
+.env
+.env.*
+
+# Misc
+*.local
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# React/Vite
+*.cache
+
+# Mac system files
+.DS_Store
+
+# Others
+*.tgz
 
 MES.md
 extension-MES.md
