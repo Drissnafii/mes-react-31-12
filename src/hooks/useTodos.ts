@@ -17,7 +17,20 @@ const fetchTodos = (): Promise<Todo[]> => {
 };
 
 // Hook pour récupérer les todos
-export const useTodos = () => {};
+import { useEffect, useState } from "react";
+
+export const useTodos = () => {
+  const [todos, setTodos] = useState<Todo[]>;
+  const [loading, setLoading] = useState(1);
+
+  useEffect(() => {
+    fetchTodos().then((data) => {
+      setTodos(data);
+    });
+  }, []);
+
+  return { todos };
+};
 
 // Hook pour ajouter un todo
 export const useAddTodo = () => {};
